@@ -1,4 +1,4 @@
-package com.example.spring_cours_springboot.entity;
+package com.example.spring_data_jpa.entity;
 
 import jakarta.persistence.*;
 

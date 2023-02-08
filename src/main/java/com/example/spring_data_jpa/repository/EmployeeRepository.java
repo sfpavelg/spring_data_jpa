@@ -1,13 +1,10 @@
-package com.example.spring_data_jpa.dao;
+package com.example.spring_data_jpa.repository;
 
-import com.example.spring_cours_springboot.entity.Employee;
+import com.example.spring_data_jpa.entity.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface EmployeeRepository {
-    public List<Employee> getAllEmployees();
-    public void saveEmployee(Employee employee);
-    public Employee getEmployee(int id);
-    public void deleteEmployee(int id);
-
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+    public List<Employee> findAllByName(String name);
 }
